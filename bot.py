@@ -130,6 +130,4 @@ async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=activity)
     print("Bot is ready!")
 
-bot.run(os.environ["Disc_Token"]) 
-
-
+bot.run(os.environ["Disc_Token"])

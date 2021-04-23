@@ -119,6 +119,45 @@ async def userinfo(ctx, member: discord.Member):
     with open(f'{member.name}.png', 'wb') as f:
         f.write(img_data)
 
+@bot.command()
+async def avatar(ctx, *,  avamember : discord.Member=None):
+    userAvatarUrl = avamember.avatar_url
+    await ctx.send(userAvatarUrl)
+
+
+@bot.command()
+async def rps(ctx, user_choice):
+    rpsGame = ['rock', 'paper', 'scissors']
+    if user_choice.lower() in rpsGame:
+        await ctx.send(f'Choice: `{user_choice}`\nBot Choice: `{random.choice(rpsGame)} you lost`')
+    elif user_choice.lower() not in rpsGame:
+        await ctx.send('**Error** This command only works with rock, paper, or scissors.')
+
+
+@bot.command(aliases=['8ball', 'test'])
+async def _8ball(ctx, *, question):
+    responses =['As I see it, yes.',
+                'Ask again later.',
+                'Better not tell you now.',
+                'Cannot predict now.',
+                'Concentrate and ask again.',
+                'Don’t count on it.',
+                'It is certain.',
+                'It is decidedly so.',
+                'Most likely.',
+                'My reply is no.',
+                'My sources say no.',
+                'Outlook not so good.',
+                'Outlook good.',
+                'Reply hazy, try again.',
+                'Signs point to yes.',
+                'Very doubtful.',
+                'Without a doubt.',
+                'Yes.',
+                'Yes – definitely.',
+                'You may rely on it.']
+    responce = random.choice(responses)
+    await ctx.send(f'Question: {question}\nAnswer: {responce}')
 
 @bot.command()
 async def say(ctx, *, question):

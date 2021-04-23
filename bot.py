@@ -40,7 +40,7 @@ async def help(ctx, args=None):
 
     await ctx.send(embed=help_embed)
     
-    @bot.command()
+@bot.command()
 async def ping(ctx):
     await ctx.send('pong')
                

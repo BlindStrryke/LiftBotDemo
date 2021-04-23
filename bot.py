@@ -171,7 +171,7 @@ async def say(ctx, *, question):
                                                                                  
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="Play ! for help", type=3)
+    activity = discord.Game(name="Play - for help", type=3)
     await bot.change_presence(status=discord.Status.online, activity=activity)
     print("Bot is ready!")
 

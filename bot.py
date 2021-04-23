@@ -4,7 +4,7 @@ from discord.ext import commands
 import os
 import asyncio
 
-bot = commands.Bot(command_prefix='!', help_command=None)   
+bot = commands.Bot(command_prefix='-', help_command=None)   
 bot.remove_command('help')
 
 @bot.command()

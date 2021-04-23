@@ -40,7 +40,8 @@ async def help(ctx, args=None):
         )
 
     await ctx.send(embed=help_embed)
-    
+
+#Moderation commands    
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
@@ -124,7 +125,7 @@ async def avatar(ctx, *,  avamember : discord.Member=None):
     userAvatarUrl = avamember.avatar_url
     await ctx.send(userAvatarUrl)
 
-
+#Fun commands
 @bot.command()
 async def rps(ctx, user_choice):
     rpsGame = ['rock', 'paper', 'scissors']

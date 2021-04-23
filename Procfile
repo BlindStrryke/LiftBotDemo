@@ -1,1 +1,1 @@
-worker: python LiftBotDemo.py
+worker: python bot.py

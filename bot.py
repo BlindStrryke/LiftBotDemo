@@ -41,7 +41,7 @@ async def help(ctx, args=None):
 
     await ctx.send(embed=help_embed)
 
-#Moderation commands    
+MOD  
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
@@ -125,6 +125,8 @@ async def avatar(ctx, *,  avamember : discord.Member=None):
     userAvatarUrl = avamember.avatar_url
     await ctx.send(userAvatarUrl)
 
+FUN COMMANDS 
+
 #Fun commands
 @bot.command()
 async def rps(ctx, user_choice):
@@ -159,6 +161,8 @@ async def _8ball(ctx, *, question):
                 'You may rely on it.']
     responce = random.choice(responses)
     await ctx.send(f'Question: {question}\nAnswer: {responce}')
+
+Greetings
 
 @bot.command()
 async def say(ctx, *, question):
